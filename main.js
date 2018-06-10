@@ -451,7 +451,7 @@ __webpack_require__.r(__webpack_exports__);
 		};
 	},
 	created: function () {
-		$.get("/static/service-code.json", function (data) {
+		$.get("service-code.json", function (data) {
 			this.header = data;
 			this.UpdateItemInfo();
 		}.bind(this));
