@@ -402,6 +402,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	data: function () {
@@ -447,7 +451,7 @@ __webpack_require__.r(__webpack_exports__);
 		};
 	},
 	created: function () {
-		$.get("service-code.json", function (data) {
+		$.get("/static/service-code.json", function (data) {
 			this.header = data;
 			this.UpdateItemInfo();
 		}.bind(this));
@@ -805,8 +809,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
 	data: function () {
 		return {
-			logoImg: "image/logo-text.png",
-			menuImg: "image/menu-button.png",
+			logoImg: "/static/image/logo-text.png",
+			menuImg: "/static/image/menu-button.png",
 			version: "1.0.0",
 			isOpen: false,
 			isLogin: false,
@@ -2318,9 +2322,37 @@ var render = function() {
               _vm._v("數量: " + _vm._s(item.num))
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "item-attr" }, [
-              _vm._v("總價: " + _vm._s(item.price * item.num) + " 元")
-            ]),
+            _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.remoteArea == false,
+                    expression: "remoteArea == false"
+                  }
+                ],
+                staticClass: "item-attr"
+              },
+              [_vm._v("總價: " + _vm._s(item.price * item.num) + " 元")]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.remoteArea == true,
+                    expression: "remoteArea == true"
+                  }
+                ],
+                staticClass: "item-attr"
+              },
+              [_vm._v("總價: " + _vm._s(item.priceRemote * item.num) + " 元")]
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "item-bt-container" }, [
               _c(
@@ -2381,9 +2413,37 @@ var render = function() {
               _vm._v("數量: " + _vm._s(item.num))
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "item-attr" }, [
-              _vm._v("總價: " + _vm._s(item.price * item.num) + " 元")
-            ]),
+            _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.remoteArea == false,
+                    expression: "remoteArea == false"
+                  }
+                ],
+                staticClass: "item-attr"
+              },
+              [_vm._v("總價: " + _vm._s(item.price * item.num) + " 元")]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.remoteArea == true,
+                    expression: "remoteArea == true"
+                  }
+                ],
+                staticClass: "item-attr"
+              },
+              [_vm._v("總價: " + _vm._s(item.priceRemote * item.num) + " 元")]
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "item-bt-container" }, [
               _c(
@@ -2444,9 +2504,37 @@ var render = function() {
               _vm._v("數量: " + _vm._s(item.num))
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "item-attr" }, [
-              _vm._v("總價: " + _vm._s(item.price * item.num) + " 元")
-            ]),
+            _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.remoteArea == false,
+                    expression: "remoteArea == false"
+                  }
+                ],
+                staticClass: "item-attr"
+              },
+              [_vm._v("總價: " + _vm._s(item.price * item.num) + " 元")]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.remoteArea == true,
+                    expression: "remoteArea == true"
+                  }
+                ],
+                staticClass: "item-attr"
+              },
+              [_vm._v("總價: " + _vm._s(item.priceRemote * item.num) + " 元")]
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "item-bt-container" }, [
               _c(
@@ -2732,9 +2820,37 @@ var render = function() {
               _vm._v("數量: " + _vm._s(item.num))
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "item-attr" }, [
-              _vm._v("總價: " + _vm._s(item.price * item.num) + " 元")
-            ]),
+            _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.remoteArea == false,
+                    expression: "remoteArea == false"
+                  }
+                ],
+                staticClass: "item-attr"
+              },
+              [_vm._v("總價: " + _vm._s(item.price * item.num) + " 元")]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.remoteArea == true,
+                    expression: "remoteArea == true"
+                  }
+                ],
+                staticClass: "item-attr"
+              },
+              [_vm._v("總價: " + _vm._s(item.priceRemote * item.num) + " 元")]
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "item-bt-container" }, [
               _c(
